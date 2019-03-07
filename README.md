@@ -39,7 +39,7 @@ Return format:
 ]}
 ```
 
-### GET /language/<lang>
+### GET /language/:lang
 Return the langauge that you are looking for.
 
 Return format:
@@ -54,7 +54,7 @@ Return format:
 ```
 > If the language not exists in database the status code of return will be 404.
 
-### POST /language/<lang>/remove
+### POST /language/:lang/remove
 Remove the specific language.
 
 > The return will be 200 if remove language is successful
