@@ -9,7 +9,14 @@ The server is responsible to save the languages and key words by language that w
 
 ## Database Model
 
+#### Language Model 
+![alt text](https://github.com/wiltonribeiro/nutrivali-news-backend/blob/master/docs/language_model.png "Language Model")
 
+#### Article Model 
+![alt text](https://github.com/wiltonribeiro/nutrivali-news-backend/blob/master/docs/article_model.png "Article Model")
+
+#### News Model 
+![alt text](https://github.com/wiltonribeiro/nutrivali-news-backend/blob/master/docs/news_model.png "News Model")
 
 ## API Methods
 
@@ -57,7 +64,7 @@ Return format:
 ### POST /language/:lang/remove
 Remove the specific language.
 
-> The return will be 200 if remove language is successful
+> The return will be 200 if language has been removed successful
 
 ### POST /language
 
@@ -72,4 +79,11 @@ Format:
   }
 }
 ```
+
+### GET pupulate/news/all
+
+This method has been used has Cron Job in App Engine. In my case, in every 3 hours the App Engine call this method to populate the database with new articles to each language. By defaul all http call by Cron Job must be a GET.
+
+> The return will be 200 if excuted with success, and 401 if who is calling this method is not the Cron Job.
+
 
